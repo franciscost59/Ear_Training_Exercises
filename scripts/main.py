@@ -21,11 +21,11 @@ def main(repeats, max_number_of_notes, min_midi, max_midi):
     for count in range(int(repeats)):
         exercise_ear_training(max_number_of_notes, min_midi, max_midi)
         play_music()
-        time.sleep(5)
+        time.sleep(8)
         play_music()
-        time.sleep(5)
+        time.sleep(8)
         play_music()
-        time.sleep(5)
+        time.sleep(8)
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Ear training exercise.")
