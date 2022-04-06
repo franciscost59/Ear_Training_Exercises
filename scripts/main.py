@@ -13,21 +13,26 @@ from midiutil import MIDIFile
 import random
 import numpy as np
 import pygame
+import sys
 import time
 from utils import *
 
-def main(repeats, max_number_of_notes, min_midi, max_midi):
-    print("aqui")
+def main(repeats, max_number_of_notes, octave, input_scale):
+
     for count in range(int(repeats)):
-        exercise_ear_training(max_number_of_notes, min_midi, max_midi)
+        
+        notes = generate_notes(max_number_of_notes,octave,input_scale)
+        exercise_ear_training(notes, max_number_of_notes, input_scale)
         play_music()
         time.sleep(8)
         play_music()
         time.sleep(8)
         play_music()
         time.sleep(8)
+        print(str(repeats-count)+" exercises to end, nice!")
     
 if __name__ == "__main__":
+    
     parser = argparse.ArgumentParser(description="Ear training exercise.")
     parser.add_argument(
         'repeats', 
@@ -38,19 +43,20 @@ if __name__ == "__main__":
         help='Number of notes on phrase.'
     )
     parser.add_argument(
-        'min_midi', 
-        help='Lower midi note.'
+        'octave', 
+        help='Octave from each phrase will be generated.'
     )
     parser.add_argument(
-        'max_midi', 
-        help='Higher midi note.'
+        'input_scale', 
+        help='Scale from which the phrase will be generated.'
     )
     args = parser.parse_args()
     
-    #try:
-    logging.info("Starting exercise, good luck!")
-    main(args.repeats, args.max_number_of_notes, args.min_midi, args.max_midi)
-    #except Exception as e:
-        #logging.error("There is a problem within the exercise.")
+    try:
+        logging.info("Starting exercise, good luck!")
+        main(args.repeats, args.max_number_of_notes, args.octave, args.input_scale)
+    
+    except Exception as e:
+        logging.error("There is a problem within the exercise.")
 
         
