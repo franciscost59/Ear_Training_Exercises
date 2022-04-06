@@ -26,6 +26,6 @@ pip install -r requirements.txt
 To run the exercises, please set your directory to the root of the repository and run the next command:
 
 ```
-python ./scripts/main.py <Number_of_Repetitions> <Maximum_number_of_notes_per_phrase> <Lower_midi_pitch> <Upper_midi_pitch>
+python ./scripts/main.py <Number_of_repetitions> <Maximum_number_of_notes_per_phrase> <Lower_midi_pitch> <Upper_midi_pitch>
 ```
 
