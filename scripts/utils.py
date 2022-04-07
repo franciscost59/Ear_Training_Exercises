@@ -77,7 +77,7 @@ def exercise_ear_training(notes, max_number_of_notes, input_scale):
             playback.append(notes[random.randint(0,6)])
     else:
         for r in range(int(max_number_of_notes)):
-            playback.append(notes[random.randint(0,11)])
+            playback.append(notes[random.randint(0,10)])
             
     track    = 0
     channel  = 0
