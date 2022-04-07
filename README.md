@@ -13,7 +13,7 @@ These repository is organized into two folders *scripts* and *resources*. Script
 
 ## Prerequisites
 
-There are essential to main requirements to run this repository. First, one needs to install *MIDIUtil* which y following the guidelines presented [here](https://github.com/MarkCWirt/MIDIUtil).
+There are essential to main requirements to run this repository. First, one needs to install *MIDIUtil*. This can be achieved by following the guidelines presented [here](https://github.com/MarkCWirt/MIDIUtil).
 
 Next, one need to install the requirements packages necessary. This can be achieved by running the following command:
 
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 To run the exercises, please set your directory to the root of the repository and run the next command:
 
 ```
-python ./scripts/main.py <Number_of_Repetitions> <Maximum_number_of_notes_per_phrase> <Octave_range> <Scale_input>
+python ./scripts/main.py <Number_of_repetitions> <Maximum_number_of_notes_per_phrase> <Octave_range> <Scale_input>
 ```
 
 **Note:** The scale inputs should be "Major_Scale" or "Minor_Melodic" or "Major_Harmonic" or "Minor_Harmonic" or "Chromatic_Scale". 

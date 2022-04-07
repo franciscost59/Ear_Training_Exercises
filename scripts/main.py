@@ -29,7 +29,7 @@ def main(repeats, max_number_of_notes, octave, input_scale):
         time.sleep(8)
         play_music()
         time.sleep(8)
-        print(str(repeats-count)+" exercises to end, nice!")
+        print(str(int(repeats)-count-1)+" exercises to end, nice!")
     
 if __name__ == "__main__":
     
