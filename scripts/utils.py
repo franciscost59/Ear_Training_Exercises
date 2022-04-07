@@ -65,6 +65,7 @@ def generate_notes(max_number_of_notes,octave,input_scale):
         exit()
         
     return(notes)
+
 def exercise_ear_training(notes, max_number_of_notes, input_scale):
 
     number_of_notes = random.randint(1,int(max_number_of_notes))
@@ -73,7 +74,7 @@ def exercise_ear_training(notes, max_number_of_notes, input_scale):
     
     if input_scale != "Chromatic_Scale":
         for r in range(int(max_number_of_notes)):
-            playback.append(notes[random.randint(0,7)])
+            playback.append(notes[random.randint(0,6)])
     else:
         for r in range(int(max_number_of_notes)):
             playback.append(notes[random.randint(0,11)])

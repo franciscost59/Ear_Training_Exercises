@@ -29,7 +29,7 @@ def main(repeats, max_number_of_notes, octave, input_scale):
         time.sleep(8)
         play_music()
         time.sleep(8)
-        print(str(repeats-count)+" exercises to end, nice!")
+        print(str(int(repeats)-count-1)+" exercises to end, nice!")
     
 if __name__ == "__main__":
     
@@ -52,11 +52,11 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
     
-    try:
-        logging.info("Starting exercise, good luck!")
-        main(args.repeats, args.max_number_of_notes, args.octave, args.input_scale)
+    # try:
+    logging.info("Starting exercise, good luck!")
+    main(args.repeats, args.max_number_of_notes, args.octave, args.input_scale)
     
-    except Exception as e:
-        logging.error("There is a problem within the exercise.")
+    # except Exception as e:
+    #     logging.error("There is a problem within the exercise.")
 
         
