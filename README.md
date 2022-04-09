@@ -13,9 +13,7 @@ These repository is organized into two folders *scripts* and *resources*. Script
 
 ## Prerequisites
 
-There are essential to main requirements to run this repository. First, one needs to install *MIDIUtil*. This can be achieved by following the guidelines presented [here](https://github.com/MarkCWirt/MIDIUtil).
-
-Next, one need to install the requirements packages necessary. This can be achieved by running the following command:
+To install the necessary requirements packages for this repository, please run the command below:
 
 ```
 pip install -r requirements.txt

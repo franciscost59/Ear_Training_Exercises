@@ -54,15 +54,15 @@ def generate_notes(max_number_of_notes,octave,input_scale):
         notes = generate_octave[major_scale]
     elif input_scale == "Minor_Melodic":
         notes = generate_octave[minor_melodic]
-    elif input_scale == "Major Harmonic":
+    elif input_scale == "Major_Harmonic":
         notes = generate_octave[major_harmonic]
-    elif input_scale == "Minor Harmonic":
+    elif input_scale == "Minor_Harmonic":
         notes = generate_octave[minor_harmonic]
     elif input_scale == "Chromatic_Scale":
         notes = chromatic_scale
     else:
-        logging.info("Please select a scale from the list: Major_Scale,Minor_Melodic, Major Harmonic, Minor Harmonic or Chromatic_Scale ")
-        exit()
+        logging.info("Please select a scale from the list: Major_Scale,Minor_Melodic, Major_Harmonic, Minor_Harmonic or Chromatic_Scale ")
+        sys.exit()
         
     return(notes)
 
