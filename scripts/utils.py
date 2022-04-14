@@ -97,4 +97,41 @@ def exercise_ear_training(notes, max_number_of_notes, input_scale):
 
     with open("exercise_ear_training.mid", "wb") as output_file:
         MyMIDI.writeFile(output_file)
+    
+    return(playback)
+        
+def verify_result(notes_input):
+    
+    if abs(notes_input[0]-notes_input[1]) == 0:
+        print("Unison")
+    if abs(notes_input[0]-notes_input[1]) == 1:
+        print("Minor Second")
+    if abs(notes_input[0]-notes_input[1]) == 2:
+        print("Major Second")
+    if abs(notes_input[0]-notes_input[1]) == 3:
+        print("Minor Third")
+    if abs(notes_input[0]-notes_input[1]) == 4:
+        print("Major Thrid")
+    if abs(notes_input[0]-notes_input[1]) == 5:
+        print("Perfect Fourth")
+    if abs(notes_input[0]-notes_input[1]) == 6:
+        print("Diminished Fith")
+    if abs(notes_input[0]-notes_input[1]) == 7:
+        print("Perfect Fifth")
+    if abs(notes_input[0]-notes_input[1]) == 8:
+        print("Minor Sixth")
+    if abs(notes_input[0]-notes_input[1]) == 9:
+        print("Major Sixth")
+    if abs(notes_input[0]-notes_input[1]) == 10:
+        print("Minor Seventh")
+    if abs(notes_input[0]-notes_input[1]) == 11:
+        print("Major Seventh")
+    if abs(notes_input[0]-notes_input[1]) == 12:
+        print("Perfect Octave")
+    else:
+        return None
+        
+        
+        
+        
         

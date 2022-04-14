@@ -22,13 +22,17 @@ def main(repeats, max_number_of_notes, octave, input_scale):
     for count in range(int(repeats)):
         
         notes = generate_notes(max_number_of_notes,octave,input_scale)
-        exercise_ear_training(notes, max_number_of_notes, input_scale)
+        exercise_notes = exercise_ear_training(notes, max_number_of_notes, input_scale)
         play_music()
         time.sleep(8)
         play_music()
         time.sleep(8)
         play_music()
         time.sleep(8)
+        if int(max_number_of_notes) == 2:
+            print(exercise_notes)
+            verify_result(exercise_notes)
+            
         print(str(int(repeats)-count-1)+" exercises to end, nice!")
     
 if __name__ == "__main__":
